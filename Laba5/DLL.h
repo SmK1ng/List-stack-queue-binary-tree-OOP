@@ -21,6 +21,7 @@ public:
 
 	int GetCount();
 	Elem* GetElem(int);
+	bool isEmpty();
 
 	void DelAll();
 	void Del(int pos = 0);

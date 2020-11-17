@@ -39,7 +39,9 @@ void Menu::select() {
 				cout << "5 - AddHead" << endl;
 				cout << "6 - Print" << endl;
 				cout << "7 - PrintPos" << endl;
-				cout << "8 - Exit in Main Menu" << endl;
+				cout << "8 - Is Empty" << endl;
+				cout << "9 - Exit in Main Menu" << endl;
+				
 
 				cin >> num;
 				int key;
@@ -83,6 +85,10 @@ void Menu::select() {
 					break;
 
 				case 8:
+					cout << DLL.isEmpty() << endl;
+					break;
+
+				case 9:
 					flag = false;
 				}
 

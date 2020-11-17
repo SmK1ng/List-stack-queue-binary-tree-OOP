@@ -213,6 +213,14 @@ Elem* DLL::GetElem(int pos) {
 		return temp;
 }
 
+bool DLL::isEmpty()
+{
+	if (GetCount() == 0)
+		return true;
+	else
+		return false;
+}
+
 DLL& DLL::operator= (const DLL& L) {
 	if (this == &L)
 		return *this;
