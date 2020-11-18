@@ -4,6 +4,7 @@
 #include "Queue.h"
 #include "BST.h"
 #include "Queue1.h"
+#include "Queue2.h"
 
 #include<stdio.h>
 
@@ -13,6 +14,7 @@ void Menu::select() {
 	Queue Queue;
 	BST BST;
 	Queue1 Queue1;
+	Queue2 Queue2;
 
 	while (true) {
 		system("cls");
@@ -20,8 +22,8 @@ void Menu::select() {
 		cout << "Choose a class:" << endl;
 		cout << "1 - Doubly Linked List" << endl;
 		cout << "2 - Queue1" << endl;
-		/*cout << "3 - Queue" << endl;
-		cout << "4 - BST" << endl;*/
+		cout << "3 - Queue2" << endl;
+		//cout << "4 - BST" << endl;
 		cout << "5 - Exit" << endl;
 
 		cin >> num_class;
@@ -137,11 +139,11 @@ void Menu::select() {
 
 			break;
 
-		/*case 3:
+		case 3:
 			while (flag) {
 				system("cls");
 				int num;
-				cout << "Select a queue operation: " << endl;
+				cout << "Select a Queue2 operation: " << endl;
 				cout << "1 - Insert" << endl;
 				cout << "2 - Delete item" << endl;
 				cout << "3 - Print" << endl;
@@ -155,15 +157,15 @@ void Menu::select() {
 				case 1:
 					cout << "Enter the queue node data: ";
 					cin >> data;
-					Queue.insert(data);
+					Queue2.insert(data);
 					break;
 
 				case 2:
-					Queue.deleteItem();
+					Queue2.deleteItem();
 					break;
 
 				case 3:
-					Queue.display();
+					Queue2.display();
 					break;
 
 				case 4:
@@ -175,7 +177,7 @@ void Menu::select() {
 
 			break;
 			
-		case 4:
+		/*case 4:
 			while (flag) {
 				system("cls");
 				int num;
