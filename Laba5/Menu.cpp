@@ -3,6 +3,7 @@
 #include "Stack.h"
 #include "Queue.h"
 #include "BST.h"
+#include "Queue1.h"
 
 #include<stdio.h>
 
@@ -11,15 +12,16 @@ void Menu::select() {
 	Stack Stack;
 	Queue Queue;
 	BST BST;
+	Queue1 Queue1;
 
 	while (true) {
 		system("cls");
 		int num_class;
 		cout << "Choose a class:" << endl;
 		cout << "1 - Doubly Linked List" << endl;
-		cout << "2 - Stack" << endl;
-		cout << "3 - Queue" << endl;
-		cout << "4 - BST" << endl;
+		cout << "2 - Queue1" << endl;
+		/*cout << "3 - Queue" << endl;
+		cout << "4 - BST" << endl;*/
 		cout << "5 - Exit" << endl;
 
 		cin >> num_class;
@@ -101,10 +103,10 @@ void Menu::select() {
 			while (flag) {
 				system("cls");
 				int num;
-				cout << "Select a stack operation: " << endl;
-				cout << "1 - Push" << endl;
-				cout << "2 - Pop" << endl;
-				cout << "3 - Show the top element" << endl;
+				cout << "Select a Queue1 operation: " << endl;
+				cout << "1 - insert" << endl;
+				cout << "2 - deleteItem" << endl;
+				cout << "3 - display" << endl;
 				cout << "4 - Exit in Main Menu" << endl;
 
 				cin >> num;
@@ -115,15 +117,15 @@ void Menu::select() {
 				case 1:
 					cout << "Enter the stack node data: ";
 					cin >> data;
-					Stack.push(data);
+					Queue1.insert(data);
 					break;
 
 				case 2:
-					Stack.pop();
+					Queue1.deleteItem();
 					break;
 
 				case 3:
-					Stack.ShowTop();
+					Queue1.display();
 					break;
 
 				case 4:
@@ -135,7 +137,7 @@ void Menu::select() {
 
 			break;
 
-		case 3:
+		/*case 3:
 			while (flag) {
 				system("cls");
 				int num;
@@ -225,7 +227,7 @@ void Menu::select() {
 				system("pause");
 			}
 
-			break;
+			break;*/
 
 		case 5:
 			exit(0);
