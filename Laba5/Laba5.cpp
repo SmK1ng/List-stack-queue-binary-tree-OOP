@@ -2,10 +2,13 @@
 
 #include "DLL.h"
 #include "Menu.h"
+#include "ListMenu.h"
+#include "QueueMenu.h"
 
 int main()
 {
-	Menu::select();
-
+	//ListMenu menu;
+	QueueMenu menu;
+	
 }
 

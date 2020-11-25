@@ -8,7 +8,48 @@
 
 #include<stdio.h>
 
-void Menu::select() {
+Menu::Menu() {
+	items.push_back("Add element menu");
+	items.push_back("Quit");
+}
+
+int Menu::addMenuItem(string item) {
+	items.push_front(item);
+	return items.size();
+}
+
+void Menu::processMenu() {
+	
+	int menu_item;
+	do {
+		int num = 1;
+
+		for (auto item : items) {
+			cout << num << "-" << item << endl;
+			num++;
+		}
+
+		cin >> menu_item;
+
+		if (menu_item > 0 && menu_item < items.size()) {
+			if (menu_item == items.size() - 1) {
+				string item_name;
+
+				cout << "Enter menu item name: " << endl;
+				cin >> item_name;
+
+				addMenuItem(item_name);
+
+				system("cls");
+			}
+			else {
+				this->processMenuItem(menu_item);
+			}
+		}
+	} while (menu_item != items.size());
+}
+
+/*void Menu::select() {
 	DLL DLL;
 	Stack Stack;
 	Queue Queue;
@@ -229,10 +270,10 @@ void Menu::select() {
 				system("pause");
 			}
 
-			break;*/
+			break;
 
 		case 5:
 			exit(0);
 			}
 		}
-	}
+	}*/

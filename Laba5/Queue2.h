@@ -2,7 +2,7 @@
 
 #include "DLL.h"
 
-class Queue2: public DLL
+class Queue2: private DLL
 {
 public:
 	void insert(int pos);

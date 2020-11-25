@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <TreatWarningAsError>false</TreatWarningAsError>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,19 +143,23 @@
     <ClCompile Include="BST.cpp" />
     <ClCompile Include="DLL.cpp" />
     <ClCompile Include="Laba5.cpp" />
+    <ClCompile Include="ListMenu.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Queue1.cpp" />
     <ClCompile Include="Queue2.cpp" />
+    <ClCompile Include="QueueMenu.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BST.h" />
     <ClInclude Include="DLL.h" />
+    <ClInclude Include="ListMenu.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Queue1.h" />
     <ClInclude Include="Queue2.h" />
+    <ClInclude Include="QueueMenu.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

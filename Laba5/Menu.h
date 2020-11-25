@@ -1,16 +1,22 @@
 #pragma once
 
+#include<list>
+#include<string>
+#include<iostream>
+
 using namespace std;
 
 class Menu
 {
-public:
-	static void select();
+	list<string> items;
 
-	void DLL_();
-	void _Stack();
-	void _Queue();
-	void _BST();
+public:
+	//static void select();
+
+	Menu();
+	int addMenuItem(string item);
+	void processMenu();
 	
+	virtual void processMenuItem(int number) = 0;
 };
 
